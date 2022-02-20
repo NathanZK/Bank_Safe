@@ -1,0 +1,110 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+
+rule MAKEBROWSE
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+
+rule PDBLINK
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+
+
+
+#Build steps
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\DC_MOTOR.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\DC_MOTOR.C" -xcl_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\DC_MOTOR.xcl" -macro_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\DC_MOTOR.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\DC_MOTOR.C" -o "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=ARM7TDMI-S -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" --cpu_mode arm -Ol --predef_macros "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\DC_MOTOR.tmp"
+  rspfile_name = C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\DC_MOTOR.xcl.rsp
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\delay.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\delay.c" -xcl_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\delay.xcl" -macro_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\delay.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\delay.c" -o "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=ARM7TDMI-S -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" --cpu_mode arm -Ol --predef_macros "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\delay.tmp"
+  rspfile_name = C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\delay.xcl.rsp
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\keypad.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\keypad.c" -xcl_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\keypad.xcl" -macro_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\keypad.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\keypad.c" -o "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=ARM7TDMI-S -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" --cpu_mode arm -Ol --predef_macros "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\keypad.tmp"
+  rspfile_name = C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\keypad.xcl.rsp
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\LCD.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\LCD.c" -xcl_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\LCD.xcl" -macro_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\LCD.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\LCD.c" -o "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=ARM7TDMI-S -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" --cpu_mode arm -Ol --predef_macros "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\LCD.tmp"
+  rspfile_name = C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\LCD.xcl.rsp
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\led.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\led.c" -xcl_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\led.xcl" -macro_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\led.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\led.c" -o "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=ARM7TDMI-S -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" --cpu_mode arm -Ol --predef_macros "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\led.tmp"
+  rspfile_name = C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\led.xcl.rsp
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\main.c" -xcl_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\main.xcl" -macro_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\main.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\main.c" -o "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=ARM7TDMI-S -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" --cpu_mode arm -Ol --predef_macros "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\main.tmp"
+  rspfile_name = C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\main.xcl.rsp
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\system.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\system.c" -xcl_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\system.xcl" -macro_file "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\system.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\system.c" -o "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=ARM7TDMI-S -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" --cpu_mode arm -Ol --predef_macros "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\system.tmp"
+  rspfile_name = C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\system.xcl.rsp
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\DC_MOTOR.pbi : INDEXER C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\DC_MOTOR.xcl |  $
+C$:\Users\Teamir\Desktop\Bank$ Safe\interface\DC_MOTOR.C
+  flags = "-out=C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\DC_MOTOR.pbi" -f "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\DC_MOTOR.xcl"
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\delay.pbi : INDEXER C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\delay.xcl |  $
+C$:\Users\Teamir\Desktop\Bank$ Safe\interface\delay.c
+  flags = "-out=C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\delay.pbi" -f "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\delay.xcl"
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\keypad.pbi : INDEXER C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\keypad.xcl |  $
+C$:\Users\Teamir\Desktop\Bank$ Safe\interface\keypad.c
+  flags = "-out=C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\keypad.pbi" -f "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\keypad.xcl"
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\LCD.pbi : INDEXER C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\LCD.xcl |  $
+C$:\Users\Teamir\Desktop\Bank$ Safe\interface\LCD.c
+  flags = "-out=C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\LCD.pbi" -f "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\LCD.xcl"
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\led.pbi : INDEXER C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\led.xcl |  $
+C$:\Users\Teamir\Desktop\Bank$ Safe\interface\led.c
+  flags = "-out=C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\led.pbi" -f "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\led.xcl"
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\main.pbi : INDEXER C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\main.xcl |  $
+C$:\Users\Teamir\Desktop\Bank$ Safe\interface\main.c
+  flags = "-out=C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\main.pbi" -f "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\main.xcl"
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\system.pbi : INDEXER C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\system.xcl |  $
+C$:\Users\Teamir\Desktop\Bank$ Safe\interface\system.c
+  flags = "-out=C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\system.pbi" -f "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\system.xcl"
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro.pbw : MAKEBROWSE C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro.pbd
+  flags = "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro.pbd" -output "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro.pbw"
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro_part0.pbi : PDBLINK C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\DC_MOTOR.pbi |  $
+C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\delay.pbi $
+C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\keypad.pbi
+  flags = -M "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro_part0.pbi" "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\DC_MOTOR.pbi" "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\delay.pbi" "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\keypad.pbi"
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro_part1.pbi : PDBLINK C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\LCD.pbi |  $
+C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\led.pbi $
+C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\main.pbi
+  flags = -M "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro_part1.pbi" "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\LCD.pbi" "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\led.pbi" "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\main.pbi"
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro_part2.pbi : PDBLINK C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\system.pbi
+  flags = -M "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro_part2.pbi" "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\system.pbi"
+
+build C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro.pbd : PDBLINK C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro_part0.pbi |  $
+C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro_part1.pbi $
+C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro_part2.pbi
+  flags = -M "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro.pbd" "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro_part0.pbi" "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro_part1.pbi" "C$:\Users\Teamir\Desktop\Bank$ Safe\interface\Debug\BrowseInfo\final_pro_part2.pbi"
+

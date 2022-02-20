@@ -1,0 +1,10 @@
+C:\Users\Teamir\Desktop\Bank\ Safe\interface\Debug\BrowseInfo\main.pbi: \
+  C:\Users\Teamir\Desktop\Bank\ Safe\interface\main.c \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\NXP/iolpc2148.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\io_macros.h \
+  C:\Users\Teamir\Desktop\Bank\ Safe\interface/keypad.h \
+  C:\Users\Teamir\Desktop\Bank\ Safe\interface/system.h \
+  C:\Users\Teamir\Desktop\Bank\ Safe\interface/delay.h \
+  C:\Users\Teamir\Desktop\Bank\ Safe\interface/LCD.h \
+  C:\Users\Teamir\Desktop\Bank\ Safe\interface/DC_MOTOR.h \
+  C:\Users\Teamir\Desktop\Bank\ Safe\interface/led.h
